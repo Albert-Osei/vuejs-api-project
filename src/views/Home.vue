@@ -7,13 +7,15 @@
         <small class="media">{{ info.source.name }}</small>
         <h2 class="title">{{ info.title }}</h2>
         <p class="content">{{ info.content }}</p>
-        <a
+        <div class="flash-button-field">
+           <a
           :href="info.url"
           target="_blank"
           rel="nonreferer noopener"
           class="flash-button"
           >Read more</a
-        >
+          >    
+        </div>
       </div>
     </div>
     <div v-else>
@@ -110,13 +112,26 @@ template {
 }
 
 .flash-button {
+  margin-left: 1rem;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.flash-button-field {
   width: 6rem;
   height: 2.3rem;
   background: #ffcc00;
   border: none;
   border-radius: 0.3rem;
-  color: #fff;
-  font-size: 0.8rem;
-  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container1 {
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0rem;
+  }
+
 }
 </style>

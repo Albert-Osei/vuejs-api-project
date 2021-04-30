@@ -26,7 +26,7 @@ export default new Vuex.Store({
       // const apiKey = process.env.VUE_APP_NEWS_KEY;
       try {
         axios
-          .get(`https://newsapi.org/v2/top-headlines?country=ng&category=${category}&apiKey=a78fc1df382b433a8342f9206c2edd92`)
+          .get(`https://newsapi.org/v2/top-headlines?country=ng&category=${category}&apiKey=f0abd4ca542b4aeb85ed022eea68a112`)
           .then((res) => {
             console.log(res.data.articles);
             commit('setSources', res.data.articles);

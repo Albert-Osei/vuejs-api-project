@@ -7,7 +7,15 @@
         <small class="media">{{ info.source.name }}</small>
         <h2 class="title">{{ info.title }}</h2>
         <p class="content">{{ info.content }}</p>
-        <a :href="info.url"  target="_blank" rel="nonreferer noopener" class="flash-button">Read more</a>
+        <div class="flash-button-field">
+           <a
+          :href="info.url"
+          target="_blank"
+          rel="nonreferer noopener"
+          class="flash-button"
+          >Read more</a
+          >    
+        </div>
       </div>
     </div>
     <div v-else>
